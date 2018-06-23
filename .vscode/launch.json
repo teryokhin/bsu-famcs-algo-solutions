@@ -1,0 +1,63 @@
+{
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": "[Linux] GDB",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath":"/usr/bin/gdb",
+            "preLaunchTask": "G++ Build",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+       {
+           "name": "[Win] Python",
+           "type": "python",
+           "request": "launch",
+           "stopOnEntry": false,
+           "pythonPath": "${config:python.pythonPath}",
+           "program": "${file}",
+           "cwd": "",
+           "console": "integratedTerminal",
+           "env": {},
+           "envFile": "${workspaceFolder}/.env",
+           "debugOptions": [],
+           "internalConsoleOptions": "neverOpen"
+       },
+       {
+           "name": "[Win] GDB",
+           "type": "cppdbg",
+           "request": "launch",
+           "targetArchitecture": "x86",   
+           "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+           "args": [],
+           "stopAtEntry": false,
+           "cwd": "${fileDirname}",
+           "environment": [],
+           "externalConsole": true,
+           "MIMode": "gdb",
+           "miDebuggerPath":"C:\\MinGW\\bin\\gdb.exe", 
+           "preLaunchTask": "G++ Build",
+           "internalConsoleOptions": "neverOpen",
+           "setupCommands": [
+               {
+                   "description": "Enable pretty-printing for gdb",
+                   "text": "-enable-pretty-printing",
+                   "ignoreFailures": true
+               }
+           ]
+       },
+   ]
+}
